@@ -63,11 +63,11 @@
     "commit-msg": "node scripts/verifyCommit.js"
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx,md,json,json5,yml,html,css,scss,less,vue}": [
-      "prettier --write"
+    "*": [
+      "prettier --write ."
     ],
     "*.ts": [
-      "eslint"
+      "eslint --ext .ts packages/*/src/**"
     ]
   }
 }
