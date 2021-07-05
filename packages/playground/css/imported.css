@@ -20,5 +20,5 @@ pre {
 
 /* test url comma separation */
 .url-separated {
-  background-image:url(images/cat.webp),url(images/dog.webp);
+  background-image: url(images/cat.webp), url(images/dog.webp);
 }
