@@ -1,25 +1,25 @@
 {
-  extends: ['config:base', 'schedule:weekly', 'group:allNonMajor'],
+  extends: ["config:base", "schedule:weekly", "group:allNonMajor"],
   ignorePaths: [
-    'packages/playground/**',
-    'packages/create-app/template-*/**',
-    '**/__tests__/**'
+    "packages/playground/**",
+    "packages/create-app/template-*/**",
+    "**/__tests__/**"
   ],
   pin: false,
-  rangeStrategy: 'bump',
+  rangeStrategy: "bump",
   node: false,
   ignoreDeps: [
     // manually bumping
-    'esbuild',
-    'rollup',
-    '@vue/compiler-sfc',
-    'node',
+    "esbuild",
+    "rollup",
+    "@vue/compiler-sfc",
+    "node",
 
     // breaking changes
-    'source-map',
-    'react-refresh',
+    "source-map",
+    "react-refresh",
 
     // breaks since "3.0.1", needs futher investigate
-    'postcss-load-config'
+    "postcss-load-config"
   ]
 }
