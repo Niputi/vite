@@ -47,6 +47,34 @@ test('namespace import', async () => {
   `)
 })
 
+test('should transform object destructure default in function param', async () => {
+  expect(
+    (
+      await ssrTransform(
+        `import { foo } from './dependency';function bar({a=foo()}){}`,
+        null,
+        null
+      )
+    ).code
+  ).toMatchInlineSnapshot(`
+    "const __vite_ssr_import_0__ = __vite_ssr_import__(\\"./dependency\\")
+    function bar({a=__vite_ssr_import_0__.foo()}){}"
+  `)
+
+  expect(
+    (
+      await ssrTransform(
+        `import { foo } from './dependency';function bar({a=foo}){}`,
+        null,
+        null
+      )
+    ).code
+  ).toMatchInlineSnapshot(`
+    "const __vite_ssr_import_0__ = __vite_ssr_import__(\\"./dependency\\")
+    function bar({a=__vite_ssr_import_0__.foo}){}"
+  `)
+})
+
 test('export function declaration', async () => {
   expect((await ssrTransform(`export function foo() {}`, null, null)).code)
     .toMatchInlineSnapshot(`
