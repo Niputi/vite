@@ -57,7 +57,7 @@ test('should transform object destructure default in function param', async () =
       )
     ).code
   ).toMatchInlineSnapshot(`
-    "const __vite_ssr_import_0__ = __vite_ssr_import__(\\"./dependency\\")
+    "const __vite_ssr_import_0__ = await __vite_ssr_import__(\\"./dependency\\")
     function bar({a=__vite_ssr_import_0__.foo()}){}"
   `)
 
@@ -70,7 +70,7 @@ test('should transform object destructure default in function param', async () =
       )
     ).code
   ).toMatchInlineSnapshot(`
-    "const __vite_ssr_import_0__ = __vite_ssr_import__(\\"./dependency\\")
+    "const __vite_ssr_import_0__ = await __vite_ssr_import__(\\"./dependency\\")
     function bar({a=__vite_ssr_import_0__.foo}){}"
   `)
 })
