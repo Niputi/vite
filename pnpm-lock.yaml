@@ -737,7 +737,7 @@ importers:
 
   packages/vite:
     specifiers:
-      '@ampproject/remapping': ^2.0.1
+      '@ampproject/remapping': ^1.1.1
       '@babel/parser': ^7.16.12
       '@babel/types': ^7.16.8
       '@rollup/plugin-alias': ^3.1.9
@@ -772,7 +772,7 @@ importers:
       cross-spawn: ^7.0.3
       debug: ^4.3.3
       dotenv: ^14.3.2
-      dotenv-expand: ^5.1.0
+      dotenv-expand: ^6.0.1
       es-module-lexer: ^0.9.3
       esbuild: 0.14.3
       estree-walker: ^2.0.2
@@ -815,7 +815,7 @@ importers:
     optionalDependencies:
       fsevents: 2.3.2
     devDependencies:
-      '@ampproject/remapping': 2.0.1
+      '@ampproject/remapping': 1.1.1
       '@babel/parser': 7.16.12
       '@babel/types': 7.16.8
       '@rollup/plugin-alias': 3.1.9_rollup@2.62.0
@@ -850,7 +850,7 @@ importers:
       cross-spawn: 7.0.3
       debug: 4.3.3
       dotenv: 14.3.2
-      dotenv-expand: 5.1.0
+      dotenv-expand: 6.0.1
       es-module-lexer: 0.9.3
       estree-walker: 2.0.2
       etag: 1.8.1
@@ -993,12 +993,11 @@ packages:
       '@algolia/requester-common': 4.11.0
     dev: true
 
-  /@ampproject/remapping/2.0.1:
-    resolution: {integrity: sha512-EldHF4Ufj3NL9yCAmYrPzY+3/Yqrzxu24F4Mu4nRjK3w70AKYRmhuLwGZdA9JeoDsbIwkgGkbqUK2INuF582Og==}
+  /@ampproject/remapping/1.1.1:
+    resolution: {integrity: sha512-YVAcA4DKLOj296CF5SrQ8cYiMRiUGc2sqFpLxsDGWE34suHqhGP/5yMsDHKsrh8hs8I5TiRVXNwKPWQpX3iGjw==}
     engines: {node: '>=6.0.0'}
     dependencies:
       '@jridgewell/resolve-uri': 3.0.3
-      '@jridgewell/trace-mapping': 0.2.2
       sourcemap-codec: 1.4.8
     dev: true
 
@@ -2047,13 +2046,6 @@ packages:
   /@jridgewell/resolve-uri/3.0.3:
     resolution: {integrity: sha512-fuIOnc81C5iRNevb/XPiM8Khp9bVjreydRQ37rt0C/dY0PAW1DRvEM3WrKX/5rStS5lbgwS0FCgqSndh9tvK5w==}
     engines: {node: '>=10.0.0'}
-    dev: true
-
-  /@jridgewell/trace-mapping/0.2.2:
-    resolution: {integrity: sha512-I9AGQzMPEzQNJgib2YSqciYWazGsXSyu1rEEeaPeM1764ZtnfNTxA5bofzG/POMI3QcvpBUxwecOPZM6ZhkEpg==}
-    dependencies:
-      '@jridgewell/resolve-uri': 3.0.3
-      sourcemap-codec: 1.4.8
     dev: true
 
   /@mapbox/node-pre-gyp/1.0.8:
@@ -4197,8 +4189,9 @@ packages:
       is-obj: 2.0.0
     dev: true
 
-  /dotenv-expand/5.1.0:
-    resolution: {integrity: sha512-YXQl1DSa4/PQyRfgrv6aoNjhasp/p4qs9FjJ4q4cQk+8m4r6k4ZSiEyytKG8f8W9gi8WsQtIObNmKd+tMzNTmA==}
+  /dotenv-expand/6.0.1:
+    resolution: {integrity: sha512-GNHcCOyRKLCXWnH3L/+sJ04PQxxgTOZDCPuQQnqkqPMGIilyoxHZ2JUNmh2VWKCfzVKH/AZsqcbuSYlDDVb/xw==}
+    engines: {node: '>=12'}
     dev: true
 
   /dotenv/14.3.2:
